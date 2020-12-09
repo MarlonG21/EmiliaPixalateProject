@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="description" content="Official website of Marlon"/>
+    <!-- Window title -->
+	<title>Image Pixelate.beta</title>
+	<!-- Bootstrap Core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/custom.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <link href="static/css/stylish-portfolio.css" rel="stylesheet">
+    <link href="static/css/custom.css" rel="stylesheet">
+    
+    <style type="text/css"> 
+      body
+      {
+        background-color: #272838 !important;
+      }
+      header
+      {
+      	width: 100%;
+      }
+      .header1
+      {
+      	display: flex;
+      	
+      	justify-content: flex-start;
+      	background-color: #6c757d;
+      	color: white;
+      	flex-direction: row-reverse;
+      	-webkit-app-region: drag;
+      }
+      .header1 h1
+      {
+      	flex-direction: unset;
+      	padding-left: 5000px;
+      	text-align: center;
+      }
+      
+      .option
+      {
+      	padding: 10px 20px;
+      	font-size: 1rem;
+
+      	-webkit-app-region: no-drag;
+
+      }
+      
+      .option:hover 
+      {
+      	background-color: red;
+      	cursor: pointer;
+      }
+      
+      .option1
+      {
+      	position: absolute;
+      	top:20px;
+      }
+      canvas 
+      {
+	      	
+	    image-rendering: optimizeSpeed;
+	    image-rendering: -moz-crisp-edges;
+	    image-rendering: -webkit-optimize-contrast;
+	    image-rendering: -o-crisp-edges;
+	    image-rendering: crisp-edges;
+	    -ms-interpolation-mode: nearest-neighbor;
+	    display: none;
+	  }
+	  .slider
+	  {
+	    -webkit-appearance: none;
+	    width: 100%;
+	    height: 15px;
+	    border-radius: 5px;   
+	    background: #d3d3d3;
+	    outline: none;
+	    opacity: 0.7;
+	    -webkit-transition: .2s;
+	    transition: opacity .2s;
+	}
+
+	.slider::-webkit-slider-thumb 
+	{
+	    -webkit-appearance: none;
+	    appearance: none;
+	    width: 25px;
+	    height: 25px;
+	    border-radius: 50%; 
+	    background: #4CAF50;
+	    cursor: pointer;
+	}
+
+	.slider::-moz-range-thumb
+	 {
+	    width: 25px;
+	    height: 25px;
+	    border-radius: 50%;
+	    background: #4CAF50;
+	    cursor: pointer;
+	 }
+
+    </style>
+</head>
+<body>
+ 
+ <div>
+ 	<header>
+ 		<div class="header1" >
+ 			<div class="option" id="exit-button">X</div>
+ 		<div   class="option" id="minimize-button">-</div>
+ 		</div>
+ 	</header>
+ 	<h1 class="p-5 text-white text-center ">Emilia's pixel app</h1>
+ </div>
+
+ <div class="container">
+	 	<div class="text-center">
+	          <a class="btn btn-outline-primary btn-xl text-white btn-white" href="javascript:publish_image();">Select Image</a>
+	          <a id="save_button" class="btn btn-outline-primary btn-xl text-white btn-white" href="javascript:save_image();">Save Image</a>
+	 	</div>
+
+	 	<div class="mt-5">
+	 		<label for="pixelation_amount" class="text-white">Pixelation</label>
+	 		<input type="range" min="0" max="100" value="100" class="slider" id="pixelation_amount"><output id="output" class="text-white"></output>
+	 	</div>
+
+	 	
+	 	
+ </div>
+ <div  style="text-align: center;padding: 30px;" >
+ 	<img src=""  id="img_imported">
+ </div>
+ 	
+
+
+ 
+ <script src="node_modules/pixelate/pixelate.js"></script>
+ <script  src="application.js"></script>
+ 
+ <script>
+ 	require('./renderer.js')
+ </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "emiliapixelproject",
+  "version": "1.0.0",
+  "description": "Pixelating image by changing image resolution",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . --all"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "Marlon Gwira",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^6.0.0",
+    "electron": "^3.0.7",
+    "pixelate": "0.0.5"
+  },
+  "devDependencies": {
+    "electron-builder": "^20.31.2",
+    "electron-packager": "^12.2.0"
+  }
+}
